@@ -19,9 +19,9 @@ import {
   } from '@ionic/react';
 import { book, build, colorFill, grid } from 'ionicons/icons';
 import React from 'react';
-import './Home.css';
+import './Step.css';
 
-const HomePage: React.FC = () => {
+const Step1Page: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -73,4 +73,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Step1Page;
