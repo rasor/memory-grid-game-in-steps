@@ -5,6 +5,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { AppPage } from './declarations';
 
 import Menu from './components/Menu';
+import Intro from './pages/Intro';
 import Step1 from './pages/Step1';
 import { arrowDropright } from 'ionicons/icons';
 
@@ -29,6 +30,11 @@ import './theme/variables.css';
 
 const appPages: AppPage[] = [
   {
+    title: 'intro',
+    url: '/intro',
+    icon: arrowDropright
+  },
+  {
     title: 'step1',
     url: '/step1',
     icon: arrowDropright
@@ -46,8 +52,9 @@ const App: React.FC = () => (
       <IonSplitPane contentId="main">
         <Menu appPages={appPages} />
         <IonRouterOutlet id="main">
+          <Route path="/intro" component={Intro} exact={true} />
           <Route path="/step1" component={Step1} exact={true} />
-          <Route path="/" render={() => <Redirect to="/step1"/> } exact={true} />
+          <Route path="/" render={() => <Redirect to="/intro"/> } exact={true} />
         </IonRouterOutlet>
       </IonSplitPane>
     </IonReactRouter>
