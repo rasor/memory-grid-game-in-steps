@@ -3,6 +3,7 @@
 This code is a TypeScript clone of [Samer Buna](https://samerbuna.com/)s React game [memory-challenge](https://jscomplete.com/playground/rs3.11).  
 
 You can find Samer's original JavaScript code in branch `javascript`. The TypeScript code is in branch `master`.  
+This is branch `javascript`.  
 
 * This codes location: https://github.com/rasor/memory-grid-game-in-steps
 * A step-by-step React Function Component TypeScript clone of Samers game
