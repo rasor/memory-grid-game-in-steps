@@ -136,7 +136,7 @@ const GameSession = ({
     if (wrongPicks === maxWrongAttempts) {
       setGameStatus(GameStatus.LOST);
     }
-  }, [pickedCellIds]);
+  }, [pickedCellIds, challengeCellIds, challengeSize, maxWrongAttempts]);
   
   const pickCell = cellId => {
     if (gameStatus === GameStatus.PLAYING) {
