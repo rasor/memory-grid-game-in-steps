@@ -14,7 +14,7 @@ const Step1Page: React.FC = () => {
 export default Step1Page;
 
 /** https://jscomplete.com/playground/rs3.1 */
-const Game = () => {
+const Game: React.FC = () => {
   return (
     <div className="game">
       <div className="grid">

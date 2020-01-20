@@ -4,15 +4,15 @@ import './Step1.css';
 import Frame from '../components/Frame';
 import utils from '../helpers/utils';
 
-const Step3Page = () => {
+const Step3Page: React.FC = () => {
   return (
     <Frame title="Step3: Making the grid dynamic">      
       <Game 
         gridSize={5}
-        challengeSize={6}
-        challengeSeconds={3}
-        playSeconds={10}
-        maxWrongAttempts={3}
+        //challengeSize={6}
+        //challengeSeconds={3}
+        //playSeconds={10}
+        //maxWrongAttempts={3}
       />
     </Frame>
   );
@@ -20,13 +20,13 @@ const Step3Page = () => {
 export default Step3Page;
 
 /** https://jscomplete.com/playground/rs3.3 */
-const Cell = ({ width }) => {
+const Cell: React.FC<{width: number;}> = ({ width }) => {
   return (
     <div className="cell" style={{ width: `${width}%` }} />
   );
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <>
       <div className="message">Game Message Here...</div>
@@ -37,7 +37,7 @@ const Footer = () => {
   );
 };
 
-const Game = ({ gridSize }) => {
+const Game: React.FC<{gridSize: number;}> = ({ gridSize }) => {
   const cellIds = utils.createArray(gridSize * gridSize);
   const cellWidth = 100 / gridSize;
   return (

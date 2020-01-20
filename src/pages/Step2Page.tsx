@@ -13,13 +13,13 @@ const Step2Page: React.FC = () => {
 export default Step2Page;
 
 /** https://jscomplete.com/playground/rs3.2 */
-const Cell = () => {
+const Cell: React.FC = () => {
   return (
     <div className="cell" style={{ width: '33.3%' }} />
   );
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <>
       <div className="message">Game Message Here...</div>
@@ -30,7 +30,7 @@ const Footer = () => {
   );
 };
 
-const Game = () => {
+const Game: React.FC = () => {
   return (
     <div className="game">
       <div className="grid">
