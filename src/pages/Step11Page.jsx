@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Step.css';
 import './Step1.css';
 import Frame from '../components/Frame';
 import utils from '../helpers/utils';
 
-const Step7Page = () => {
+const Step11Page = () => {
   return (
-    <Frame title="Step7: Implementing behaviors to change the state">
+    <Frame title="Step11: Using custom Hooks">
       <p>Here comes something in Frame</p>   
     </Frame>
   );
 };
-export default Step7Page;
+export default Step11Page;
 
-/** https://jscomplete.com/playground/rs3.7 */
+/** https://jscomplete.com/playground/rs3.11 */
