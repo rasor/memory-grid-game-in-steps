@@ -26,9 +26,12 @@ This code is a TypeScript clone of [Samer Buna](https://samerbuna.com/)'s game [
 * Learn:
     * React Function Components:
         * [React Function Components and Hooks](https://www.robinwieruch.de/react-function-component)
+        * [React.js Tutorial: The Complete React Introduction](https://jscomplete.com/learn/complete-intro-react)
+        * [All the JavaScript you need to know before starting with React](https://medium.com/swlh/all-the-javascript-you-need-to-know-before-starting-with-react-abe2ebffb067)
     * React TypeScript:
         * [react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
         * [react-redux-typescript-guide](https://github.com/piotrwitek/react-redux-typescript-guide)
+    * [Beginner Programmers Mistakes :: The Professional Programmer](https://jscomplete.com/learn/pro-programmer/beginner-programmers-mistakes)
 * The 2016 Book - using React Classes:
     * [Syncfusion Free Ebooks | React.js Succinctly](https://www.syncfusion.com/ebooks/reactjs_succinctly)
     * [Code](https://github.com/junior-ales/memory-grid-game)
