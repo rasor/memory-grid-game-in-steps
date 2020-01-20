@@ -6,6 +6,7 @@ import {
   } from '@ionic/react';
 import React from 'react';
 import './Step.css';
+import './Step1.css';
 import Header from '../components/Header';
 
 const Step1Page: React.FC = () => {
@@ -15,7 +16,7 @@ const Step1Page: React.FC = () => {
       <IonContent>
         <IonCard className="welcome-card">
           <IonCardContent>
-            <p>Here comes something</p>   
+            <Game/>
           </IonCardContent>
         </IonCard>
       </IonContent>
@@ -24,3 +25,27 @@ const Step1Page: React.FC = () => {
 };
 
 export default Step1Page;
+
+const Game = () => {
+  return (
+    <div className="game">
+      <div className="grid">
+          <div className="cell" style={{ width: '33.3%' }} />
+          <div className="cell" style={{ width: '33.3%' }} />
+          <div className="cell" style={{ width: '33.3%' }} />
+        
+          <div className="cell" style={{ width: '33.3%' }} />
+          <div className="cell" style={{ width: '33.3%' }} />
+          <div className="cell" style={{ width: '33.3%' }} />
+        
+          <div className="cell" style={{ width: '33.3%' }} />
+          <div className="cell" style={{ width: '33.3%' }} />
+          <div className="cell" style={{ width: '33.3%' }} />
+      </div>
+      <div className="message">Game Message Here...</div>
+      <div className="button">
+        <button>Start Game</button>
+      </div>
+    </div>
+  );
+};
