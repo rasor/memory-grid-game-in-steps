@@ -60,16 +60,16 @@ const Footer = ({ gameStatus, startGame }) => {
 
 const GameSession = ({
   cellIds,
-  challengeCellIds,
+  //challengeCellIds,
   cellWidth,
-  challengeSize,
-  challengeSeconds,
-  playSeconds,
-  maxWrongAttempts,
+  //challengeSize,
+  //challengeSeconds,
+  //playSeconds,
+  //maxWrongAttempts,
 }) => {
   const [gameStatus, setGameStatus] = useState(GameStatus.NEW);
-  const [pickedCellIds, setPickedCellIds] = useState([]);
-  const [countdown, setCountdown] = useState(playSeconds);
+  //const [pickedCellIds, setPickedCellIds] = useState([]);
+  //const [countdown, setCountdown] = useState(playSeconds);
   
   return (
     <div className="game">

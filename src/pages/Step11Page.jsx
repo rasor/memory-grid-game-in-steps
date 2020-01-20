@@ -61,16 +61,21 @@ const Cell = ({ width, gameStatus, isChallenge, isPicked, onClick }) => {
 const Footer = ({ gameStatus, countdown, startGame, resetGame }) => {
   const buttonAreaContent = () => {
     switch(gameStatus) {
+      // eslint-disable-next-line
       case GameStatus.NEW:
         return <button onClick={startGame}>Start Game</button>;
       case GameStatus.CALLENGE:
         // fall-through
+      // eslint-disable-next-line
       case GameStatus.PLAYING:
         return countdown;
       case GameStatus.WON:
         // fall-through
+      // eslint-disable-next-line
       case GameStatus.LOST:
         return <button onClick={resetGame}>Play Again</button>;
+      default:
+        // fall-through
     }
   };
   return (
@@ -189,6 +194,7 @@ const GameGenerator = () => {
   
   return (
     <GameSession
+      key={gameId}
       cellIds={cellIds}
       challengeCellIds={challengeCellIds}
       cellWidth={cellWidth}

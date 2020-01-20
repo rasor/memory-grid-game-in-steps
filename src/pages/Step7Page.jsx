@@ -60,17 +60,22 @@ const Cell = ({ width, gameStatus, isChallenge, isPicked }) => {
 const Footer = ({ gameStatus, startGame, countdown }) => {
   const buttonAreaContent = () => {
     switch(gameStatus) {
+      // eslint-disable-next-line
       case GameStatus.NEW:
         return <button onClick={startGame}>Start Game</button>;
       case GameStatus.CALLENGE:
         // fall-through
+      // eslint-disable-next-line
       case GameStatus.PLAYING:
         return countdown;
       case GameStatus.WON:
         // fall-through
+      // eslint-disable-next-line
       case GameStatus.LOST:
         return <button onClick={() => {/* TODO */}}>Play Again</button>;
-    }
+      default:
+        // fall-through
+      }
   };
   return (
     <>
@@ -84,12 +89,13 @@ const GameSession = ({
   cellIds,
   challengeCellIds,
   cellWidth,
-  challengeSize,
+  //challengeSize,
   challengeSeconds,
   playSeconds,
-  maxWrongAttempts,
+  //maxWrongAttempts,
 }) => {
   const [gameStatus, setGameStatus] = useState(GameStatus.NEW);
+  // eslint-disable-next-line
   const [pickedCellIds, setPickedCellIds] = useState([]);
   const [countdown, setCountdown] = useState(playSeconds);
   

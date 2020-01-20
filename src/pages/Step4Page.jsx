@@ -62,10 +62,10 @@ const GameSession = ({
   cellIds,
   challengeCellIds,
   cellWidth,
-  challengeSize,
-  challengeSeconds,
-  playSeconds,
-  maxWrongAttempts,
+  //challengeSize,
+  //challengeSeconds,
+  //playSeconds,
+  //maxWrongAttempts,
 }) => {
   const [gameStatus, setGameStatus] = useState(GameStatus.NEW);
 
