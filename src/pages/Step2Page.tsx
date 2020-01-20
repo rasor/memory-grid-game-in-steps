@@ -10,3 +10,5 @@ const Step2Page: React.FC = () => {
   );
 };
 export default Step2Page;
+
+/** https://jscomplete.com/playground/rs3.2 */

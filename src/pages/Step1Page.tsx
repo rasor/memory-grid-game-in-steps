@@ -13,6 +13,7 @@ const Step1Page: React.FC = () => {
 
 export default Step1Page;
 
+/** https://jscomplete.com/playground/rs3.1 */
 const Game = () => {
   return (
     <div className="game">
