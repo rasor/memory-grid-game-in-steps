@@ -5,7 +5,7 @@ import Frame from '../components/Frame';
 
 const Step2Page: React.FC = () => {
   return (
-    <Frame title="Step2">
+    <Frame title="Step2: Extracting components">
       <Game/>
     </Frame>
   );

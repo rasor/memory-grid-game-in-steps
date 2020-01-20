@@ -5,7 +5,7 @@ import Frame from '../components/Frame';
 
 const Step1Page: React.FC = () => {
   return (
-    <Frame title="Step1">
+    <Frame title="Step1: Initial markup and style">
       <Game/>
     </Frame>
   );

@@ -6,7 +6,7 @@ import utils from '../helpers/utils';
 
 const Step3Page = () => {
   return (
-    <Frame title="Step3">      
+    <Frame title="Step3: Making the grid dynamic">      
       <Game 
         gridSize={5}
         challengeSize={6}

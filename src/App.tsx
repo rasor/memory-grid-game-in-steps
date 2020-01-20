@@ -45,57 +45,57 @@ const appPages: AppPage[] = [
     icon: arrowDropright
   },
   {
-    title: 'Step1',
+    title: 'Step1: Initial markup and style',
     url: '/step1',
     icon: arrowDropright
   },
   {
-    title: 'Step2',
+    title: 'Step2: Extracting components',
     url: '/step2',
     icon: arrowDropright
   },
   {
-    title: 'Step3',
+    title: 'Step3: Making the grid dynamic',
     url: '/step3',
     icon: arrowDropright
   },
   {
-    title: 'Step4',
+    title: 'Step4: Designing data and state elements',
     url: '/step4',
     icon: arrowDropright
   },
   {
-    title: 'Step5',
+    title: 'Step5: Determining what to make stateful',
     url: '/step5',
     icon: arrowDropright
   },
   {
-    title: 'Step6',
+    title: 'Step6: Using mock state values',
     url: '/step6',
     icon: arrowDropright
   },
   {
-    title: 'Step7',
+    title: 'Step7: Implementing behaviors to change the state',
     url: '/step7',
     icon: arrowDropright
   },
   {
-    title: 'Step8',
+    title: 'Step8: Using side effects to separate concerns',
     url: '/step8',
     icon: arrowDropright
   },
   {
-    title: 'Step9',
+    title: 'Step9: Resetting a React component',
     url: '/step9',
     icon: arrowDropright
   },
   {
-    title: 'Step10',
+    title: 'Step10: Controlling state initial value with a prop',
     url: '/step10',
     icon: arrowDropright
   },
   {
-    title: 'Step11',
+    title: 'Step11: Using custom Hooks',
     url: '/step11',
     icon: arrowDropright
   },
