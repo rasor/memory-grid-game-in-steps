@@ -37,3 +37,4 @@ const utils = {
       return [includeCount, excludeCount];
     },
 };
+export default utils;
