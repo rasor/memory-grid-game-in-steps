@@ -1,12 +1,12 @@
 ## Intro 
 
-This code is a TypeScript clone of [Samer Buna](https://samerbuna.com/)'s game [memory-challenge](https://jscomplete.com/playground/rs3.11)
+This code is a TypeScript clone of [Samer Buna](https://samerbuna.com/)s React game [memory-challenge](https://jscomplete.com/playground/rs3.11)
 
-* This code: https://github.com/rasor/memory-grid-game-in-steps
-* A step-by-step React Function Component TypeScript clone of Samer's game
+* This codes location: https://github.com/rasor/memory-grid-game-in-steps
+* A step-by-step React Function Component TypeScript clone of Samers game
 * Try [the game](https://jscomplete.com/p/memory-challenge/embed?preview=1)
 * From 2019 book [Syncfusion Free Ebooks | React Succinctly](https://www.syncfusion.com/ebooks/react-succinctly)
-* Code:
+* Samers Code:
     * P.076: Chapter 5 Let’s Build a Game
     * P.080: Step1 [Initial markup and style](https://jscomplete.com/playground/rs3.1)
     * P.082: Step2 [Extracting components](https://jscomplete.com/playground/rs3.2)

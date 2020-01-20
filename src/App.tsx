@@ -5,8 +5,8 @@ import { IonReactRouter } from '@ionic/react-router';
 import { AppPage } from './declarations';
 
 import Menu from './components/Menu';
-import Intro from './pages/Intro';
-import Step1 from './pages/Step1';
+import IntroPage from './pages/IntroPage';
+import Step1Page from './pages/Step1Page';
 import { arrowDropright } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -52,8 +52,8 @@ const App: React.FC = () => (
       <IonSplitPane contentId="main">
         <Menu appPages={appPages} />
         <IonRouterOutlet id="main">
-          <Route path="/intro" component={Intro} exact={true} />
-          <Route path="/step1" component={Step1} exact={true} />
+          <Route path="/intro" component={IntroPage} exact={true} />
+          <Route path="/step1" component={Step1Page} exact={true} />
           <Route path="/" render={() => <Redirect to="/intro"/> } exact={true} />
         </IonRouterOutlet>
       </IonSplitPane>

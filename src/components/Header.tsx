@@ -1,6 +1,6 @@
 import React from "react";
 import { IonHeader, IonToolbar, IonButtons, IonMenuButton, IonTitle } from "@ionic/react";
-import { RouteComponentProps } from "react-router-dom";
+//import { RouteComponentProps } from "react-router-dom";
 
 interface HeaderProps {
     title: string;
