@@ -1,26 +1,13 @@
-import {
-  IonContent,
-  IonPage,
-  IonCard,
-  IonCardContent
-  } from '@ionic/react';
 import React from 'react';
 import './Step.css';
 import './Step1.css';
-import Header from '../components/Header';
+import Frame from '../components/Frame';
 
 const Step1Page: React.FC = () => {
   return (
-    <IonPage>
-      <Header title="Step1"/>
-      <IonContent>
-        <IonCard className="welcome-card">
-          <IonCardContent>
-            <Game/>
-          </IonCardContent>
-        </IonCard>
-      </IonContent>
-    </IonPage>
+    <Frame title="Step1">
+      <Game/>
+    </Frame>
   );
 };
 
