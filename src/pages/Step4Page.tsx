@@ -1,5 +1,6 @@
 import React from 'react';
 import './Step.css';
+import './Step1.css';
 import Frame from '../components/Frame';
 
 const Step4Page: React.FC = () => {
@@ -10,3 +11,5 @@ const Step4Page: React.FC = () => {
   );
 };
 export default Step4Page;
+
+/** https://jscomplete.com/playground/rs3.4 */
