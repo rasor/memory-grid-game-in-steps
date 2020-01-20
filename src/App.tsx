@@ -8,6 +8,15 @@ import Menu from './components/Menu';
 import IntroPage from './pages/IntroPage';
 import Step1Page from './pages/Step1Page';
 import Step2Page from './pages/Step2Page';
+import Step3Page from './pages/Step3Page';
+import Step4Page from './pages/Step4Page';
+import Step5Page from './pages/Step5Page';
+import Step6Page from './pages/Step6Page';
+import Step7Page from './pages/Step7Page';
+import Step8Page from './pages/Step8Page';
+import Step9Page from './pages/Step9Page';
+import Step10Page from './pages/Step10Page';
+import Step11Page from './pages/Step11Page';
 import { arrowDropright } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,20 +40,65 @@ import './theme/variables.css';
 
 const appPages: AppPage[] = [
   {
-    title: 'intro',
+    title: 'Intro',
     url: '/intro',
     icon: arrowDropright
   },
   {
-    title: 'step1',
+    title: 'Step1',
     url: '/step1',
     icon: arrowDropright
   },
   {
-    title: 'step2',
+    title: 'Step2',
     url: '/step2',
     icon: arrowDropright
-  }
+  },
+  {
+    title: 'Step3',
+    url: '/step3',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step4',
+    url: '/step4',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step5',
+    url: '/step5',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step6',
+    url: '/step6',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step7',
+    url: '/step7',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step8',
+    url: '/step8',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step9',
+    url: '/step9',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step10',
+    url: '/step10',
+    icon: arrowDropright
+  },
+  {
+    title: 'Step11',
+    url: '/step11',
+    icon: arrowDropright
+  },
 ];
 
 const App: React.FC = () => (
@@ -56,6 +110,15 @@ const App: React.FC = () => (
           <Route path="/intro" component={IntroPage} exact={true} />
           <Route path="/step1" component={Step1Page} exact={true} />
           <Route path="/step2" component={Step2Page} exact={true} />
+          <Route path="/step3" component={Step3Page} exact={true} />
+          <Route path="/step4" component={Step4Page} exact={true} />
+          <Route path="/step5" component={Step5Page} exact={true} />
+          <Route path="/step6" component={Step6Page} exact={true} />
+          <Route path="/step7" component={Step7Page} exact={true} />
+          <Route path="/step8" component={Step8Page} exact={true} />
+          <Route path="/step9" component={Step9Page} exact={true} />
+          <Route path="/step10" component={Step10Page} exact={true} />
+          <Route path="/step11" component={Step11Page} exact={true} />
           <Route path="/" render={() => <Redirect to="/intro"/> } exact={true} />
         </IonRouterOutlet>
       </IonSplitPane>
