@@ -14,11 +14,11 @@ const Step4Page: React.FC = () => {
 export default Step4Page;
 
 /** https://jscomplete.com/playground/rs3.4 */
-interface KeyValue {
+interface Dictionary {
   [key: string]: string;
 };
 
-const GameStatus: KeyValue = {
+const GameStatus: Dictionary = {
   NEW: 'NEW',
   CHALLENGE: 'CHALLENGE',
   PLAYING: 'PLAYING',
@@ -26,14 +26,14 @@ const GameStatus: KeyValue = {
   LOST: 'LOST',
 };
 
-const CellStatus: KeyValue = {
+const CellStatus: Dictionary = {
   NORMAL: 'white',
   HIGHLIGHT: 'lightblue',
   CORRECT: 'lightgreen',
   WRONG: 'pink',
 };
 
-const Messages: KeyValue = {
+const Messages: Dictionary = {
   NEW: 'You will have a few seconds to memorize the blue random cells',
   CHALLENGE: 'Remember these blue cells now',
   PLAYING: 'Which cells were blue?',

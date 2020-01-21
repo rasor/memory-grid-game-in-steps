@@ -14,7 +14,11 @@ const Step5Page = () => {
 export default Step5Page;
 
 /** https://jscomplete.com/playground/rs3.5 */
-const GameStatus = {
+interface Dictionary {
+  [key: string]: string;
+};
+
+const GameStatus: Dictionary = {
   NEW: 'NEW',
   CHALLENGE: 'CHALLENGE',
   PLAYING: 'PLAYING',
@@ -22,14 +26,14 @@ const GameStatus = {
   LOST: 'LOST',
 };
 
-const CellStatus = {
+const CellStatus: Dictionary = {
   NORMAL: 'white',
   HIGHLIGHT: 'lightblue',
   CORRECT: 'lightgreen',
   WRONG: 'pink',
 };
 
-const Messages = {
+const Messages: Dictionary = {
   NEW: 'You will have a few seconds to memorize the blue random cells',
   CHALLENGE: 'Remember these blue cells now',
   PLAYING: 'Which cells were blue?',
@@ -37,7 +41,7 @@ const Messages = {
   LOST: 'Game Over',
 };
 
-const Cell = ({ width }) => {
+const Cell: React.FC<{width: number;}> = ({ width }) => {
   const cellStatus = CellStatus.NORMAL;
   return (
     <div
@@ -47,7 +51,7 @@ const Cell = ({ width }) => {
   );
 };
 
-const Footer = ({ gameStatus, startGame }) => {
+const Footer: React.FC<{gameStatus: string; startGame():void;}> = ({ gameStatus, startGame }) => {
   return (
     <>
       <div className="message">{Messages[gameStatus]}</div>
@@ -58,7 +62,7 @@ const Footer = ({ gameStatus, startGame }) => {
   );
 };
 
-const GameSession = ({
+const GameSession: React.FC<{cellIds: number[]; challengeCellIds: number[]; cellWidth: number}> = ({
   cellIds,
   //challengeCellIds,
   cellWidth,
@@ -89,22 +93,22 @@ const GameSession = ({
   );
 };
 
-const GameGenerator = () => {
+const GameGenerator: React.FC = () => {
   const gridSize = 5;
-  const challengeSize = 6;
+  const challengeSize: number = 6;
   const cellIds = utils.createArray(gridSize * gridSize);
   const cellWidth = 100 / gridSize;
-  const challengeCellIds = utils.sampleArray(cellIds, challengeSize);
+  const challengeCellIds: number[] = utils.sampleArray(cellIds, challengeSize);
 
   return (
     <GameSession
       cellIds={cellIds}
       challengeCellIds={challengeCellIds}
       cellWidth={cellWidth}
-      challengeSize={challengeSize}
-      challengeSeconds={3}
-      playSeconds={10}
-      maxWrongAttempts={3}
+      //challengeSize={challengeSize}
+      //challengeSeconds={3}
+      //playSeconds={10}
+      //maxWrongAttempts={3}
     />
   );
 };
