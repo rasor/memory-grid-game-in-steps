@@ -63,7 +63,7 @@ const Cell: React.FC<{width: number; gameStatus: string; isChallenge: boolean; i
   );
 };
 
-const Footer: React.FC<{gameStatus: string; startGame(): void; countdown: number}> = ({ gameStatus, startGame, countdown }) => {
+const Footer: React.FC<{gameStatus: string; startGame(): void; countdown: number;}> = ({ gameStatus, startGame, countdown }) => {
   const buttonAreaContent = () => {
     switch(gameStatus) {
       // eslint-disable-next-line
