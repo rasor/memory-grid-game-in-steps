@@ -52,7 +52,7 @@ const Cell: React.FC<{width: number;}> = ({ width }) => {
 };
 
 // Declare a prop as a func https://medium.com/@jeffbutsch/typescript-interface-functions-c691a108e3f1
-const Footer: React.FC<{gameStatus: string; startGame():void;}> = ({ gameStatus, startGame }) => {
+const Footer: React.FC<{gameStatus: string; startGame(): void;}> = ({ gameStatus, startGame }) => {
   return (
     <>
       <div className="message">{Messages[gameStatus]}</div>
@@ -63,7 +63,7 @@ const Footer: React.FC<{gameStatus: string; startGame():void;}> = ({ gameStatus,
   );
 };
 
-const GameSession: React.FC<{cellIds: number[]; challengeCellIds: number[]; cellWidth: number}> = ({
+const GameSession: React.FC<{cellIds: number[]; challengeCellIds: number[]; cellWidth: number;}> = ({
   cellIds,
   challengeCellIds,
   cellWidth,

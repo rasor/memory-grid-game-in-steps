@@ -51,7 +51,7 @@ const Cell: React.FC<{width: number;}> = ({ width }) => {
   );
 };
 
-const Footer: React.FC<{gameStatus: string; startGame():void;}> = ({ gameStatus, startGame }) => {
+const Footer: React.FC<{gameStatus: string; startGame(): void;}> = ({ gameStatus, startGame }) => {
   return (
     <>
       <div className="message">{Messages[gameStatus]}</div>
@@ -62,7 +62,7 @@ const Footer: React.FC<{gameStatus: string; startGame():void;}> = ({ gameStatus,
   );
 };
 
-const GameSession: React.FC<{cellIds: number[]; challengeCellIds: number[]; cellWidth: number}> = ({
+const GameSession: React.FC<{cellIds: number[]; challengeCellIds: number[]; cellWidth: number;}> = ({
   cellIds,
   //challengeCellIds,
   cellWidth,

@@ -14,7 +14,11 @@ const Step6Page = () => {
 export default Step6Page;
 
 /** https://jscomplete.com/playground/rs3.6 */
-const GameStatus = {
+interface Dictionary {
+  [key: string]: string;
+};
+
+const GameStatus: Dictionary = {
   NEW: 'NEW',
   CHALLENGE: 'CHALLENGE',
   PLAYING: 'PLAYING',
@@ -22,14 +26,14 @@ const GameStatus = {
   LOST: 'LOST',
 };
 
-const CellStatus = {
+const CellStatus: Dictionary = {
   NORMAL: 'white',
   HIGHLIGHT: 'lightblue',
   CORRECT: 'lightgreen',
   WRONG: 'pink',
 };
 
-const Messages = {
+const Messages: Dictionary = {
   NEW: 'You will have a few seconds to memorize the blue random cells',
   CHALLENGE: 'Remember these blue cells now',
   PLAYING: 'Which cells were blue?',
@@ -37,7 +41,8 @@ const Messages = {
   LOST: 'Game Over',
 };
 
-const Cell = ({ width, gameStatus, isChallenge, isPicked }) => {
+const Cell: React.FC<{width: number; gameStatus: string; isChallenge: boolean; isPicked: boolean}> = 
+({ width, gameStatus, isChallenge, isPicked }) => {
   let cellStatus = CellStatus.NORMAL;
   if (gameStatus !== GameStatus.NEW) {
     if (isPicked) {
@@ -57,7 +62,7 @@ const Cell = ({ width, gameStatus, isChallenge, isPicked }) => {
   );
 };
 
-const Footer = ({ gameStatus, startGame, countdown }) => {
+const Footer: React.FC<{gameStatus: string; startGame(): void; countdown: number}> = ({ gameStatus, startGame, countdown }) => {
   const buttonAreaContent = () => {
     switch(gameStatus) {
       // eslint-disable-next-line
@@ -85,7 +90,7 @@ const Footer = ({ gameStatus, startGame, countdown }) => {
   );
 };
   
-const GameSession = ({
+const GameSession: React.FC<{cellIds: number[]; challengeCellIds: number[]; cellWidth: number; playSeconds: number;}> = ({
   cellIds,
   challengeCellIds,
   cellWidth,
@@ -96,7 +101,7 @@ const GameSession = ({
 }) => {
   const [gameStatus, setGameStatus] = useState(GameStatus.NEW);
   // eslint-disable-next-line
-  const [pickedCellIds, setPickedCellIds] = useState([]);
+  const [pickedCellIds, setPickedCellIds] = useState<number[]>([]);
   // eslint-disable-next-line
   const [countdown, setCountdown] = useState(playSeconds);
 
@@ -124,20 +129,20 @@ const GameSession = ({
 
 const GameGenerator = () => {
   const gridSize = 5;
-  const challengeSize = 6;
+  const challengeSize: number = 6;
   const cellIds = utils.createArray(gridSize * gridSize);
   const cellWidth = 100 / gridSize;
-  const challengeCellIds = utils.sampleArray(cellIds, challengeSize);
+  const challengeCellIds: number[] = utils.sampleArray(cellIds, challengeSize);
   
   return (
     <GameSession
       cellIds={cellIds}
       challengeCellIds={challengeCellIds}
       cellWidth={cellWidth}
-      challengeSize={challengeSize}
-      challengeSeconds={3}
+      //challengeSize={challengeSize}
+      //challengeSeconds={3}
       playSeconds={10}
-      maxWrongAttempts={3}
+      //maxWrongAttempts={3}
     />
   );
 };
