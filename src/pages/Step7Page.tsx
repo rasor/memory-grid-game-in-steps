@@ -41,7 +41,7 @@ const Messages: Dictionary = {
   LOST: 'Game Over',
 };
 
-const Cell: React.FC<{width: number; gameStatus: string; isChallenge: boolean; isPicked: boolean}> = 
+const Cell: React.FC<{width: number; gameStatus: string; isChallenge: boolean; isPicked: boolean;}> = 
 ({ width, gameStatus, isChallenge, isPicked }) => {
   let cellStatus = CellStatus.NORMAL;
   if (gameStatus !== GameStatus.NEW) {

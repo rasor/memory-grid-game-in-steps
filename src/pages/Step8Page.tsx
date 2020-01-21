@@ -14,7 +14,11 @@ const Step8Page = () => {
 export default Step8Page;
 
 /** https://jscomplete.com/playground/rs3.8 */
-const GameStatus = {
+interface Dictionary {
+  [key: string]: string;
+};
+
+const GameStatus: Dictionary = {
   NEW: 'NEW',
   CHALLENGE: 'CHALLENGE',
   PLAYING: 'PLAYING',
@@ -22,14 +26,14 @@ const GameStatus = {
   LOST: 'LOST',
 };
 
-const CellStatus = {
+const CellStatus: Dictionary = {
   NORMAL: 'white',
   HIGHLIGHT: 'lightblue',
   CORRECT: 'lightgreen',
   WRONG: 'pink',
 };
 
-const Messages = {
+const Messages: Dictionary = {
   NEW: 'You will have a few seconds to memorize the blue random cells',
   CHALLENGE: 'Remember these blue cells now',
   PLAYING: 'Which cells were blue?',
@@ -37,7 +41,8 @@ const Messages = {
   LOST: 'Game Over',
 };
 
-const Cell = ({ width, gameStatus, isChallenge, isPicked, onClick }) => {
+const Cell: React.FC<{width: number; gameStatus: string; isChallenge: boolean; isPicked: boolean; onClick(): void | number[];}> = 
+({ width, gameStatus, isChallenge, isPicked, onClick }) => {
   let cellStatus = CellStatus.NORMAL;
   if (gameStatus !== GameStatus.NEW) {
     if (isPicked) {
@@ -58,7 +63,7 @@ const Cell = ({ width, gameStatus, isChallenge, isPicked, onClick }) => {
   );
 };
 
-const Footer = ({ gameStatus, startGame, countdown }) => {
+const Footer: React.FC<{gameStatus: string; startGame(): void; countdown: number}> = ({ gameStatus, startGame, countdown }) => {
   const buttonAreaContent = () => {
     switch(gameStatus) {
       // eslint-disable-next-line
@@ -85,8 +90,13 @@ const Footer = ({ gameStatus, startGame, countdown }) => {
     </>
   );
 };
-  
-const GameSession = ({
+
+interface GameSessionProps {
+  cellIds: number[]; challengeCellIds: number[]; cellWidth: number; 
+  challengeSize: number; challengeSeconds: number; playSeconds: number;
+  maxWrongAttempts: number;
+}; 
+const GameSession: React.FC<GameSessionProps> = ({
   cellIds,
   challengeCellIds,
   cellWidth,
@@ -96,11 +106,11 @@ const GameSession = ({
   maxWrongAttempts,
 }) => {
   const [gameStatus, setGameStatus] = useState(GameStatus.NEW);
-  const [pickedCellIds, setPickedCellIds] = useState([]);
+  const [pickedCellIds, setPickedCellIds] = useState<number[]>([]);
   const [countdown, setCountdown] = useState(playSeconds);
   
   useEffect(() => {
-    let timerId;
+    let timerId: NodeJS.Timeout;
     if (gameStatus === GameStatus.CHALLENGE) {
       timerId = setTimeout(
         () => setGameStatus(GameStatus.PLAYING),
@@ -134,7 +144,7 @@ const GameSession = ({
     }
   }, [pickedCellIds, challengeCellIds, challengeSize, maxWrongAttempts]);
   
-  const pickCell = cellId => {
+  const pickCell = (cellId: number) => {
     if (gameStatus === GameStatus.PLAYING) {
       setPickedCellIds(pickedCellIds => {
         if (pickedCellIds.includes(cellId)) {
