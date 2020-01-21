@@ -39,4 +39,18 @@ You can find Samer's original JavaScript code in branch `javascript`. The TypeSc
     * [Syncfusion Free Ebooks | React.js Succinctly](https://www.syncfusion.com/ebooks/reactjs_succinctly)
     * [Code](https://github.com/junior-ales/memory-grid-game)
 
+## Starter template
+
+The starter template is CreateReactApp using Ionic components for nice mobile experience.  
+
+```bash
+npm install -g ionic
+ionic start my-app
+# Choose 
+# - Framework: React
+# - Template: SideMenu
+cd my-app
+npm start
+```
+
 The End

@@ -24,8 +24,8 @@ const IntroPage: React.FC = () => {
             <IonCardTitle>Memory Grid Game - In steps</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
-            <p>This code: https://github.com/rasor/memory-grid-game-in-steps</p>
-            <p>Cloned to TypeScript from book https://www.syncfusion.com/ebooks/react-succinctly</p> 
+            <p>This code: <a href="https://github.com/rasor/memory-grid-game-in-steps">github.com/rasor/memory-grid-game-in-steps</a></p>
+            <p>Cloned to TypeScript from book <a href="https://www.syncfusion.com/ebooks/react-succinctly">syncfusion.com/ebooks/react-succinctly</a></p> 
             <p>by <a href="https://samerbuna.com/">Samer Buna</a></p> 
           </IonCardContent>
         </IonCard>
