@@ -33,6 +33,7 @@ You can find Samer's original JavaScript code in branch `javascript`. The TypeSc
     * React TypeScript:
         * [react-typescript-cheatsheet](https://github.com/typescript-cheatsheets/react-typescript-cheatsheet)
         * [react-redux-typescript-guide](https://github.com/piotrwitek/react-redux-typescript-guide)
+        * [Declare a prop as a func](https://medium.com/@jeffbutsch/typescript-interface-functions-c691a108e3f1)
     * [Beginner Programmers Mistakes :: The Professional Programmer](https://jscomplete.com/learn/pro-programmer/beginner-programmers-mistakes)
 * The 2016 Book - using React Classes:
     * [Syncfusion Free Ebooks | React.js Succinctly](https://www.syncfusion.com/ebooks/reactjs_succinctly)
